@@ -163,7 +163,7 @@ def extraer_todos_los_carruseles(driver):
     carruseles = driver.find_elements(By.XPATH, '//div[contains(@class,"a-carousel-viewport")]//ancestor::div[contains(@class,"a-carousel")]')
     
     for carrusel in carruseles:
-        # Desplazar todo el carrusel (si aplica)
+        # Desplazar el carrusel
         while True:
             try:
                 siguiente = carrusel.find_element(By.XPATH, './/li[contains(@class, "a-carousel-card") and contains(@aria-hidden, "true")]')
